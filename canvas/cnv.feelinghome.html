@@ -1,0 +1,13 @@
+<div class="info">
+	<p>
+		FEELING HOME
+	</p>
+</div>
+<div sz-frame style="border-color: black;"></div>
+<div sz-frame style="border-color: black;"></div>
+
+<div ng-repeat="x in imagesAll | shuffle | slice:begin:end"> 			
+	<div ng-repeat="photo in x.photos" sz-image>
+		<img ng-src="{{ photo.original_size.url }}" width="100%">
+	</div>
+</div>

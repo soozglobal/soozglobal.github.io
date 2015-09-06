@@ -1,0 +1,10 @@
+			<div class="media-wrapper">
+				<h3 ng-show="!permitLoad" class="text-align-center permit-load">tap or hover to load media</h3>
+				<div ng-repeat="x in media"> 			
+					<div ng-repeat="photo in x.photos" class="media-parent">
+						<img ng-src="{{ photo.original_size.url }}" width="100%">
+					</div>
+				</div>
+			</div>
+
+			

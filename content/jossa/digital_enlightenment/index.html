@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Digital enlightenment</title>
+</head>
+
+<body>
+
+
+  <style type="text/css">
+
+    html,body {
+      height:100%;
+      margin:0;
+      overflow:hidden;
+      background-color:#6F0;
+	/*zoom:0.5; 
+	-moz-transform: scale(0.5); Interesting zoom */
+}
+
+.pstn {
+  position:absolute;
+  width: 15%;
+}
+
+.non-mover {
+  position:relative;
+  width:100%;
+  height:100%;
+  background-image:url(img/sometimes.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-origin: content-box
+
+}
+
+.loaderClass {
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 999999;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color:#0F0;
+  text-align:center;
+
+}
+
+#loading_div {
+	text-align:center;
+	padding: 20% 0 0 0;
+}
+
+h1 {
+	color:#F0F;
+}
+
+img{
+	width: 100%;
+}
+
+
+</style>
+
+<script type="text/javascript">
+  var speed=3000;
+  var l=[];
+  var t=[];
+  var obj,w,h,c;  
+  var objs=document.getElementsByTagName('div');
+  var bit=30;
+  
+  function init(){
+   obj=document.getElementsByTagName('html')[0]; 
+   w=obj.offsetWidth;
+   h=obj.offsetHeight;
+   
+   for(c=0;c<objs.length;c++){
+    if(objs[c].className=='non-mover'){
+     objs[c].style.zIndex=Math.floor(Math.random()*w)/2;}
+     
+     if(objs[c].className!='non-mover'){
+       l[c]=Math.floor(Math.random()*w);
+       t[c]=Math.floor(Math.random()*h);
+       objs[c].style.zIndex=Math.floor(Math.random()*w);
+       
+       if(l[c]>=w-objs[c].offsetWidth){
+         l[c]=w-objs[c].offsetWidth-bit;
+       }
+       
+       if(l[c]<=0){
+         l[c]=0+bit;
+       }
+       
+       if(t[c]>=h-objs[c].offsetHeight){
+         t[c]=h-objs[c].offsetHeight-bit;
+       }
+       
+       if(t[c]<=0){
+         t[c]=0+bit;
+       }
+       
+       objs[c].style.left=l[c]+'px';
+       objs[c].style.top=t[c]+'px';
+       objs[c].className='pstn';
+     }
+   }
+   setTimeout(function(){init()},speed); 
+ }
+
+ window.addEventListener?
+ window.addEventListener('load',init,false):
+ window.attachEvent('onload',init);
+
+</script>
+
+</head>
+
+<script type="text/javascript">// <![CDATA[
+
+  //Function to hide the loading div
+  function loadingDivHide()
+  {
+    document.getElementById("loading_div").style.display = "none";
+    document.getElementById("content_area_div").style.display = "";
+  }
+
+  // ]]></script>
+
+
+  <body onload="loadingDivHide()" runat="server" id="Body" >
+
+    <div id="loading_div">
+      <img src="img/sig.gif"  height="66"><br>
+      <h1>Loading...</h1>
+    </div>
+
+    <a href="index2.html"><div id="randomBox1"><img src="img/pill.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox2"><img src="img/peace.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox3"><img src="img/ice.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox5"><img src="img/hand.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox6"><img src="img/can.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox6"><img src="img/lip.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox7"><img src="img/pill.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox8"><img src="img/peace.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox9"><img src="img/ice.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox10"><img src="img/hand.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox11"><img src="img/can.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox12"><img src="img/lip.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox17"><img src="img/please.png" /></div></a>
+    <a href="index2.html"><div id="randomBox18"><img src="img/please.png" /></div></a>
+    <a href="index2.html"><div id="randomBox19"><img src="img/ball.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox20"><img src="img/pill.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox21"><img src="img/peace.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox22"><img src="img/ice.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox23"><img src="img/hand.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox24"><img src="img/can.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox25"><img src="img/lip.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox26"><img src="img/sig.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox27"><img src="img/weed.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox28"><img src="img/pill.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox29"><img src="img/peace.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox30"><img src="img/ice.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox31"><img src="img/hand.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox32"><img src="img/can.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox33"><img src="img/lip.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox34"><img src="img/pill.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox35"><img src="img/peace.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox36"><img src="img/ice.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox37"><img src="img/hand.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox38"><img src="img/can.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox39"><img src="img/weed.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox42"><img src="img/ball.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox43"><img src="img/pill.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox44"><img src="img/peace.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox45"><img src="img/ice.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox46"><img src="img/hand.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox47"><img src="img/can.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox48"><img src="img/lip.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox49"><img src="img/sig.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox50"><img src="img/peace.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox51"><img src="img/weed.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox52"><img src="img/weed.gif" /></div></a>
+    <a href="index2.html"><div id="randomBox53"><img src="img/drop.png" /></div></a>
+    <a href="index2.html"><div id="randomBox54"><img src="img/drop.png" /></div></a>
+    <a href="index2.html"><div id="randomBox55"><img src="img/drop.png" /></div></a>
+    <a href="index2.html"><div id="randomBox56"><img src="img/stripe.png" /></div></a>
+    <a href="index2.html"><div id="randomBox57"><img src="img/stripe.png" /></div></a>
+    <a href="index2.html"><div id="randomBox58"><img src="img/stripe.png" /></div></a>
+    <a href="index2.html"><div id="randomBox59"><img src="img/zigzag.png" /></div></a>
+    <a href="index2.html"><div id="randomBox60"><img src="img/zigzag.png" /></div></a>
+    <a href="index2.html"><div id="randomBox61"><img src="img/zigzag.png" /></div></a>
+    <a href="index2.html"><div id="randomBox62"><img src="img/zigzag.png" /></div></a>
+    <a href="index2.html"><div id="randomBox63"><img src="img/screen2.png" /></div></a>
+    <a href="index2.html"><div id="randomBox64"><img src="img/screen2.png" /></div></a>
+
+    <div class="non-mover"></div>
+
+  </body>
+  </html>

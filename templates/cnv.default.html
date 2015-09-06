@@ -1,0 +1,9 @@
+<div class="info" ng-bind-html="caption | trust"></div>
+<div sz-frame class="c-def c-anim-10"></div>
+<div sz-frame class="c-def c-anim-10"></div>
+
+<div ng-repeat="x in imagesAll | shuffle | slice:begin:end"> 			
+	<div ng-repeat="photo in x.photos" class="c-img c-anim-25" sz-image>
+		<img ng-src="{{ photo.original_size.url }}" width="100%">
+	</div>
+</div>

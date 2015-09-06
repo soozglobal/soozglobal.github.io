@@ -1,0 +1,12 @@
+<div class="txt mobsubpan bt bb bl ease" ng-class="{active: txtIsActive === 1, 'top-panel': state === 3}" ng-mouseenter="setTourStep(6)">
+	<div>
+		<div class="article-nav">
+			<a ng-href="/#/{{params.name}}" class="fa fa-arrow-circle-left article-button ml5" ng-mouseover="setTourStep(10)"></a>
+			<i class="fa article-button screen-large" ng-click="toggleTxt()" ng-class="{'fa-unlock-alt': txtIsActive === 0, 'fa-lock': txtIsActive === 1}" ng-mouseover="setTourStep(9)"></i>
+			<p class="article-link">http://sooz.global/#/p/{{currentPost.id}}</p>
+		</div>
+	</div>
+	<div ng-bind-html="currentPost.body | trust" class="current-post">
+		
+	</div>
+</div>

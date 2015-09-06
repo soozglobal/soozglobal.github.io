@@ -1,0 +1,40 @@
+	<div class="info">
+		<p>
+			Dalena Tran<br>
+			Temple
+		</p>
+	</div>
+	<style type="text/css" scope>
+		.temple-n2-container {
+			position: absolute;
+			font-size: 14px;
+			text-align: justify;
+		}
+
+		@media (max-width: 1024px)  {
+			.temple-n2-container{
+				font-size: 10px;
+			}
+		}
+	</style>
+
+	<div sz-frame style="border-color: black;"></div>
+	<div sz-frame style="border-color: black;"></div>
+
+	<div ng-controller="webglController">
+		<iframe ng-if="isWebgl" src="https://clara.io/embed/cdc8a463-cdc9-485c-bc80-517081ac575d?renderer=webgl&timeline=false&autoplay=false&bgColor=0x000000&tools=false&header=false&logo=false" width="100%" height="100%" style="position:absolute; z-index: 0; margin-left: -35%; cursor: move;"></iframe>
+		<p ng-show="!isWebgl" style="position: absolute; text-align: center; width: 100%; z-index: 900">
+			WebGL content missing.<br>
+			{{webglText}}
+		</p>
+	</div>
+
+	<div class="temple-n2-container" sz-position sz-size sz-rotate sz-order>
+		the kind of cold that welcomed the life in warmth when i was younger, i was an unconscious non-conformist. i drifted towards the vices. i enjoyed this subtle mischief of being regarded as a clutter of lust towards the unknown. even then i had a pull towards provoking. soon this trajectory accelerated into light and collapsed at the center of my palms bleeding the generational flow. spewing from my hands is a current of information translated from binaries the complex human experience. tentacles extend from a sea of porn ads and animal videos to caress you from your chakras. the black mirror was a reflection of the world and the more you witnessed and reflected back the more humble and one you became. with enough information you could infuse into a new world of tiny crystal lights sending you instantaneous prophecies and impressions of other realities and potential. we are entering a reinterpretation of our identities as humans. even genders become arbitrary that a collection of labels are patched into the fabric in order to describe the infinite fidelity of living. history was never wrong, values have just become obsolete. we are all displaced and forced to understand each other. as we are introduced to each other around the world we realize that human's greatest sin is greed. greed is taking but not giving and because of this we have created clots and the earth no longer can sustain these strokes. we are rational and emotional and that is how we can love and love wholly. learning the truth is an intense study and sensual connection to reality. it is allowing your self to evolve mindfully to be able to heal wounds and gain nourishing perspectives. had i not been born to live now accessing trillions of data points i would never understand the pure peace of compassion and my responsibility towards myself and the people i have met and love.
+	</div>
+
+	<div ng-repeat="x in imagesAll | shuffle | slice:begin:end"> 			
+		<div ng-repeat="photo in x.photos" class="c-img c-anim-25" sz-image sz-order>
+			<img ng-src="{{ photo.original_size.url }}" width="100%">
+		</div>
+	</div>	

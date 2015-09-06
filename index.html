@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<!-- 
+███████╗ ██████╗  ██████╗ ███████╗    ██╗   ██╗ ██╗   █████╗ 
+██╔════╝██╔═══██╗██╔═══██╗╚══███╔╝    ██║   ██║███║  ██╔══██╗
+███████╗██║   ██║██║   ██║  ███╔╝     ██║   ██║╚██║  ╚██████║
+╚════██║██║   ██║██║   ██║ ███╔╝      ╚██╗ ██╔╝ ██║   ╚═══██║
+███████║╚██████╔╝╚██████╔╝███████╗     ╚████╔╝  ██║██╗█████╔╝
+╚══════╝ ╚═════╝  ╚═════╝ ╚══════╝      ╚═══╝   ╚═╝╚═╝╚════╝ 
+                                                             
+██╗   ██╗██████╗ ██╗         ██████╗     ██╗██████╗ ██╗      
+██║   ██║██╔══██╗██║         ╚════██╗    ██║██╔══██╗██║      
+██║   ██║██████╔╝██║          █████╔╝    ██║██████╔╝██║      
+██║   ██║██╔══██╗██║         ██╔═══╝     ██║██╔══██╗██║      
+╚██████╔╝██║  ██║███████╗    ███████╗    ██║██║  ██║███████╗ 
+ ╚═════╝ ╚═╝  ╚═╝╚══════╝    ╚══════╝    ╚═╝╚═╝  ╚═╝╚══════╝ 
+                                                             
+██╗██████╗ ██╗         ██████╗     ██╗   ██╗██████╗ ██╗      
+██║██╔══██╗██║         ╚════██╗    ██║   ██║██╔══██╗██║      
+██║██████╔╝██║          █████╔╝    ██║   ██║██████╔╝██║      
+██║██╔══██╗██║         ██╔═══╝     ██║   ██║██╔══██╗██║      
+██║██║  ██║███████╗    ███████╗    ╚██████╔╝██║  ██║███████╗ 
+╚═╝╚═╝  ╚═╝╚══════╝    ╚══════╝     ╚═════╝ ╚═╝  ╚═╝╚══════╝ 
+
+Version: 1.9
+Developed by: Hirad Sab - hiradsab.com
+JS Libraries: AngularJS, jQuery
+Font Libraries: FontAwesome
+
+Sooz is hosted on Github, and utilizes the power
+of AngularJS for dynamic content management.
+We pull a fraction of our data from Tumblr, but will
+soon fully migrate to Github and Github Pages.
+
+https://github.com/soozglobal/soozglobal.github.io
+
+Happy soozing!
+-->
+<html ng-app="sooz"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:og="http://ogp.me/ns#"
+xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>SOOZ V1.9</title>
+	<meta name="description" content="Multidisciplinary execution of digital metaphors.">
+	<meta name="robots" content="index, follow" />
+	<meta property="og:title" content="SOOZ V1.9">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://sooz.global">
+	<meta property="og:image" content="http://sooz.global/img/ogimage.png">
+	<meta property="og:site_name" content="SOOZ V1.9">
+	<meta property="og:description" content="Multidisciplinary execution of digital metaphors.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="https://code.angularjs.org/1.3.15/angular.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/config.js"></script>
+	<script type="text/javascript" src="js/dependencies.js"></script>
+	<script type="text/javascript" src="js/controllers.js"></script>
+	<script type="text/javascript" src="js/services.js"></script>
+	<script type="text/javascript" src="js/filters.js"></script>
+	<script type="text/javascript" src="js/modifiers.js"></script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+
+	<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/img/favicon/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/img/favicon/manifest.json">
+	<link rel="shortcut icon" href="/img/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="msapplication-TileImage" content="/img/favicon/mstile-144x144.png">
+	<meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	
+</head>
+<body ng-controller="mainController">
+	<h1 class="c-title overline">SOOZ</h1>
+	<div class="c-ip">
+		<p class="c-rn">RN-U-R</p>
+		<p class="c-num">{{ip}}</p>
+	</div>
+
+	<div ui-view="canvasContainer" class="canv-container"></div>
+
+	<div class="panels mobpan ease" ng-class="{active: active}">
+
+		<div class="sid mobsubpan bt bb br ease" ng-class="{'top-panel': state === 1}" ng-mouseover="setTourStep(4)">
+			<div class="about">
+				<h2>sooz is a multidisciplinary execution of digital metaphors.<br>
+					actualized for the senses.<br>
+					ready for consumption.</h2>
+				</div>
+				<div class="feeling-nav" ng-click="active = !active">
+					<a href="/#/feelingclose">Feeling Close</a><br>
+					<a href="/#/feelingblue">Feeling Blue</a><br>
+					<a href="/#/feelinghome">Feeling Home</a><br>
+					<a href="/#/feelingstairs">Feeling Stairs</a>
+				</div>
+				<div class="artist-nav" ng-click="active = !active">
+					<a href="/#/archibald">Rachael Archibald</a><br>
+					<a href="/#/jossa">Pieter Jossa</a><br>
+					<a href="/#/joyce">Mikey Joyce</a><br>
+					<a href="/#/kuns">Eltons Kūns</a><br>
+					<a href="/#/montoya">Alarico Montoya</a><br>
+					<a href="/#/riley">Reese Riley</a><br>
+					<a href="/#/sab">Hirad Sab</a><br>
+					<a href="/#/tran">Dalena Tran</a><br>
+					<a href="/#/trananne">Dalena Tran & Huxley Anne</a>		
+				</div>
+			</div>
+
+			<div class="med mobmedpan bt ease" ng-class="{'top-panel': state === 2}" ng-mouseover="setTourStep(5)">
+				<div ui-view="mediaContainer" ng-mouseover="loadMedia()" style="height: 100%;"></div>	
+			</div>
+
+			<div ui-view="postContainer">
+			</div>
+
+			<div class="mobnav">
+				<a href="" class="fa fa-circle stroke" ng-click="setState(1)"></a>
+				<a href="" class="fa fa-circle-o ml stroke" ng-click="setState(2)" style="display: none;"></a>
+				<a href="" class="fa fa-dot-circle-o ml stroke" ng-click="setState(3)"></a>
+				<a href="" class="fa fa-chevron-up ease ml stroke" ng-click="active = !active" ng-class="{rotate180: active === true}"></a>
+			</div>
+
+			<div class="arrows-container">
+				<i class="arrow fa fa-arrow-left" style="top: 50%;right: 20px;margin-top: -5px;"></i>
+				<i class="arrow fa fa-arrow-right" style="top: 50%;left: 20px;margin-top: -5px;"></i>
+				<i class="arrow fa fa-arrow-up" style="bottom: 20px;left: 50%;margin-left: -5px; display: none;"></i>
+			</div>
+		</div>
+
+		<div class="control">
+			<a class="fa fa-circle random" ng-href="{{random()}}" ng-mouseover="setTourStep(3)"></a>
+			<i class="fa fa-refresh refresh" ng-click="refresh()" ng-mouseover="setTourStep(2)"></i>
+			<i class="fa fa-arrows-alt fullscreen" ng-click="goFullscreen()" ng-mouseover="setTourStep(1)"></i>
+
+		</div>
+
+		<div class="tour">
+			<p ng-show="tourStep === 0">Information bar</p>
+			<p ng-show="tourStep === 1">Toggle fullscreen</p>
+			<p ng-show="tourStep === 2">Regenerate Canvas</p>
+			<p ng-show="tourStep === 3">Home (Random Canvases)</p>
+			<p ng-show="tourStep === 4">Info</p>
+			<p ng-show="tourStep === 5">IRL</p>
+			<p ng-show="tourStep === 6">Texts</p>
+			<p ng-show="tourStep === 7">Next text</p>
+			<p ng-show="tourStep === 8">Previous text</p>
+			<p ng-show="tourStep === 9">Toggle lock text panel</p>
+			<p ng-show="tourStep === 10">Latest texts</p>
+		</div>
+
+		<div class="ie-container" ng-class="{'show': isIE}">
+			<div class="ie-text-container">
+				<h3 style="margin: 30px 0px 0px 24px;text-decoration: overline;">ie taught us denial.</h3>
+				<a href="http://www.google.com/chrome/" style="color: white;text-decoration: blink;margin-left: 24px;font-size: 1.17em;font-weight: bold;"> change your browser.</a>
+			</div>
+		</div>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-63298208-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script type="text/javascript">
+			$(document).keydown(function (evt) {
+				if (evt.keyCode == 39 || evt.keyCode == 40) {
+					evt.preventDefault();
+				} else { 
+					if (evt.keyCode == 37 || evt.keyCode == 38) {
+						evt.preventDefault();
+					}
+				}
+			})
+		</script>
+</body>
+	</html>

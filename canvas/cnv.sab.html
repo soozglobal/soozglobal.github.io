@@ -1,0 +1,123 @@
+<div class="info">
+	<p>
+		Hirad Sab<br>
+		Tekkon
+	</p>
+</div>
+<div sz-frame style="border-color: white;"></div>
+<div sz-frame style="border-color: white;"></div>
+
+<div ng-repeat="x in imagesAll | shuffle | slice:0:4"> 			
+	<div ng-repeat="photo in x.photos" sz-image>
+		<img ng-src="{{ photo.original_size.url }}" width="100%" >
+	</div>
+</div>
+
+<style type="text/css" scope>
+/*Default */
+::-webkit-scrollbar-track {
+	background-color: #000000;
+} /* the new scrollbar will have a flat appearance with the set background color */
+	
+::-webkit-scrollbar-thumb {
+	background-color: #ffffff; 
+} /* this will style the thumb, ignoring the track */
+		
+
+::-webkit-scrollbar-corner {
+	background-color: #000000;
+}
+hr {
+	border: 1px solid white !important;
+}
+body {
+  color: white !important;
+  background-color: black;
+}
+a {
+	color: white !important;
+}
+.bl {
+	border-left: 15px solid white !important;
+}
+
+.bt {
+	border-top: 15px solid white !important;
+}
+
+.br {
+	border-right: 15px solid white !important;
+}
+
+.bb {
+	border-bottom: 15px solid white !important;
+}
+.stroke{
+	text-shadow: 0px 0px 0 #000, 0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000 !important;
+}
+.txt {
+	background: black !important;
+}
+.sid {
+	background: black !important;
+}
+.med {
+	background: black !important;
+}
+.article-nav{
+	border-bottom: 2px solid white !important;
+}
+.article-button {
+	color: white !important;
+}
+.article-link {
+	background: white !important;
+	color: black !important;
+}
+.permit-load {
+	color: black !important;
+}
+.ie-text-container {
+	background: white !important;
+	color: black !important;
+}
+.ie-container {
+
+	background: black !important;
+}
+.c-title {
+	color: black !important;
+	background: white !important;
+}
+.c-ip {
+	color: black !important;
+	background: white !important;
+}
+
+.info {
+  background: white !important;
+  color: black !important;
+}
+.menu {
+  background: white !important;
+  color: black !important;
+}
+.menu-inner {
+  color: black !important;
+}
+.menu-inner > a {
+  color: black !important;
+}
+.tour {
+  background: white !important;
+  color: black !important;
+}
+.control {
+  background: white !important;
+  color: black !important;
+}
+.random {
+  color: black !important;
+}
+
+</style>

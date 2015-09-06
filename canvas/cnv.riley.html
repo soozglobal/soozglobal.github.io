@@ -1,0 +1,49 @@
+<div class="info">
+	<p>
+		Reese Riley<br>
+		Journal de Bord
+	</p>
+</div>
+
+<!-- <div sz-frame style="border-color: black;"></div>
+<div sz-frame style="border-color: black;"></div> -->
+<div id="map-canvas" style="position: absolute;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 100%;
+opacity: .1;"></div>
+<script type="text/javascript-lazy">
+	function latLng (){
+		return [40.711668, -74.013231];
+	} 
+
+	function initialize() {
+		var randomLatLng = latLng();
+		var mapOptions = {
+			zoom: 18,
+			center: new google.maps.LatLng(randomLatLng[0], randomLatLng[1]),
+			mapTypeId: google.maps.MapTypeId.SATELLITE,
+			disableDefaultUI: true
+		};
+		var map = new google.maps.Map(document.getElementById('map-canvas'),
+			mapOptions);
+
+		// google.maps.event.addListener(map, 'mousemove', function(e) {
+		// 	placeMarker(e.latLng, map);
+		// });
+	}
+
+	function placeMarker(position, map) {
+	}
+
+	initialize();
+	console.log("done");
+
+</script>
+
+<div ng-repeat="x in imagesAll | shuffle | slice:0:1"> 			
+	<div ng-repeat="photo in x.photos" class="c-img c-anim-25" sz-image>
+		<img ng-src="{{ photo.original_size.url }}" width="100%" ng-click="refresh()" style="cursor: url(content/riley/journal_de_bord/crosshair.png) 80 80, crosshair;">
+	</div>
+</div>

@@ -1,0 +1,85 @@
+
+<!-- <div class="info" ng-bind-html="caption | trust"></div> -->
+<!-- <div sz-position sz-border sz-size sz-order class="c-border c-anim-10" style="border-color: white;"></div> -->
+<!-- <div sz-position sz-border sz-size sz-order class="c-border c-anim-10" style="border-color: white;"></div> -->
+<script type="text/javascript-lazy" src="js/p5.min.js"></script>
+<script type="text/javascript-lazy" src="js/p5.sound.js"></script>
+
+
+<style type="text/css" scope>
+.lemon {
+	width: 100% !important;
+	height: 100% !important;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 0;
+}
+</style>
+
+<script type="text/javascript-lazy">
+var sketch = function(p) {
+	var input;
+	var analyzer;
+
+	p.setup = function() {
+		console.log('alive2');
+
+		canvas = p.createCanvas(window.innerWidth, window.innerHeight);
+		canvas.class('lemon');
+		p.background(0, 0);
+		mic = new p5.AudioIn();
+		mic.start();
+
+		fft = new p5.FFT();
+		fft.setInput(mic);
+	};
+	p.draw = function() {
+		p.background(255);
+		var vol = mic.getLevel()*100;
+		p.noFill();
+		p.stroke(0);
+
+
+		var h = p.map(vol, 0, 1, 0, p.height);
+		// p.rect( (p.width-h)/2, (p.height-h)/2, h, h);
+
+		var spectrum = fft.analyze();
+
+		p.beginShape();
+		for (i = 0; i<spectrum.length; i++) {
+			p.vertex(p.map(spectrum[i], 0, 25, p.width, 200)*vol, i);
+			p.vertex(i, p.map(spectrum[i], 0, 25, p.height, 200)*vol);
+			p.vertex(i,p.map(spectrum[i], 0, 25, p.height, 200)*vol);
+			p.vertex(p.map(spectrum[i], 0, 25, p.width, 200)*vol, i);
+
+		}
+		p.endShape();
+
+		// p.beginShape();
+		// for (i = spectrum.length; i>=0; i--) {
+		// 	p.vertex(p.map(spectrum[i], 0, 25, p.width, p.height), 100*i);
+		// 	p.vertex(100*i, p.map(spectrum[i], 0, 25, p.height, p.width));
+
+
+		// }
+		// p.endShape();
+
+		// p.beginShape();
+		// for (i = 0; i<spectrum.length; i++) {
+		// 	p.vertex(vol, p.map(spectrum[i], 0, 255, p.height, 0) );
+		// 	p.vertex(p.map(spectrum[i], 0, 255, p.width, 0), vol);
+		// }
+		// p.endShape();
+
+	};
+};
+var myp5 = new p5(sketch);
+</script>
+
+<div ng-repeat="x in imagesAll | shuffle | slice:begin:end"> 			
+	<div ng-repeat="photo in x.photos" sz-image>
+		<img ng-src="{{ photo.original_size.url }}" width="100%">
+	</div>
+</div>

@@ -1,0 +1,175 @@
+ <div ng-if="multicanvas <= 0.2">
+	<div class="info">
+		<p>
+			Alarico Montoya<br>
+			filesys
+		</p>
+	</div>
+
+	<div sz-frame sz-opac style="border-color: black;"></div>
+	<div sz-frame sz-opac style="border-color: black;"></div>
+
+
+	<div sz-position class="browser-window-500">
+		<div class="blur"></div>
+	</div>
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+		<defs>
+			<filter id="blur">
+				<feGaussianBlur stdDeviation="5" />
+			</filter>
+		</defs>
+	</svg>
+
+	<style type="text/css" scope>
+		html {
+			background: url(content/montoya/url0/filesysbg.jpg) no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+		div.browser-window-500 {
+			background: url(content/montoya/url0/browser-window.png) no-repeat top center;
+			position: relative;
+			width: 500px;
+			height: 23px;
+			margin: 0 auto;
+			z-index: 1000;
+			background-size: cover;
+		}
+		div.blur {
+			position: relative;
+			top: 10px;
+			margin: 0 auto;
+			width: 495px;
+			height: 350px;
+			overflow: hidden;
+
+			-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+			-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+			box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+		}
+		div.blur::before {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			background-image: url(content/montoya/url0/filesysbg.jpg);
+			z-index: -1;
+			display: block;
+			position: absolute;
+			content: ' ';
+			filter: blur(5px);
+			-webkit-filter: url('#blur');
+			filter: url('#blur');
+			-webkit-filter: blur(10px);
+			filter: blur(10px);
+			background-size: cover;
+			opacity: 0.3;
+		}
+	</style>
+</div>
+<div ng-if="multicanvas > 0.2 && multicanvas <= 0.4">
+	<div class="info">
+		<p>
+			Alarico Montoya<br>
+			F(OK)US
+		</p>
+	</div>
+	<style type="text/css" scope>
+		body {
+			cursor: url(content/montoya/url0/ducttape.png) 80 80, crosshair;
+		}
+	</style>
+	<div sz-position sz-border sz-size sz-order style="border-color: black;"></div>
+	<div sz-position sz-border sz-size sz-order style="border-color: black;"></div>
+	<img sz-image src="content/montoya/url0/plants-blurred.jpg">
+	<img sz-image src="content/montoya/url0/plants-frame.png" style="min-width: 50%;">
+</div>
+<div ng-if="multicanvas > 0.4 && multicanvas <= 0.6">
+	<div class="info">
+		<p>
+			Alarico Montoya<br>
+			Resolution
+		</p>
+	</div>
+	<style type="text/css" scope>
+		html {
+			background: url(content/montoya/url0/jesus-bg.jpg) no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+	</style>
+	<div sz-position sz-border sz-size sz-order style="border-color: black;"></div>
+	<div sz-position sz-border sz-size sz-order style="border-color: black;"></div>
+
+	<img sz-position sz-order sz-width sz-chance sz-chance chance="100" src="content/montoya/url0/jesus-inside.png" style="min-width: 50%;">
+	<p sz-position sz-size sz-order>
+		artists printed<br/>
+		stretched<br />
+		and marked with an urban outfitters price tag<br />
+	</p>
+	<p sz-position sz-size sz-order>
+		฿ ฿ ฿
+	</p>
+	<p sz-position sz-size sz-order>
+		usernames marked in stone
+	</p>
+	<p sz-position sz-size sz-order>
+		art can only<br />
+		transcend the size of<br /> window which contains it<br />
+
+		-Steve Jo฿s (fka filesys)
+	</p>
+	<p sz-position sz-size sz-order>your limit is your bandwidth</p>
+</div>
+<div ng-if="multicanvas > 0.6 && multicanvas <= 0.8">
+	<div class="info">
+		<p>
+			Alarico Montoya<br>
+			Safety
+		</p>
+	</div>
+	<style type="text/css" scope>
+		html {
+			background: url(content/montoya/url0/safety-bg.jpg) no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+	</style>
+	<div sz-position sz-border sz-size sz-opac sz-order style="border-color: black;"></div>
+	<div sz-position sz-border sz-size sz-opac sz-order style="border-color: black;"></div>
+
+	<img sz-position sz-order sz-width sz-chance sz-spin chance="100" src="content/montoya/url0/knife.png" style="min-width: 60px; max-width:200px;" class="animated slow">
+</div>
+<div ng-if="multicanvas > 0.8 && multicanvas <= 1">
+	<div class="info">
+		<p>
+			Alarico Montoya<br>
+			THANK SOOZ
+		</p>
+	</div>
+	<style type="text/css" scope>
+		html {
+			background: url(content/montoya/url0/thank-sooz.jpg) no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+
+			color: #ff0000;
+		}
+	</style>
+	<div sz-position sz-border sz-size sz-opac sz-order style="border-color: red;"></div>
+	<div sz-position sz-border sz-size sz-opac sz-order style="border-color: red;"></div>
+
+	<img sz-position sz-order sz-width sz-chance chance="25" src="content/montoya/url0/emoji-flower.png" style="min-width: 48px; max-width:171px;">
+	<img sz-position sz-order sz-width sz-chance chance="25" src="content/montoya/url0/emoji-rose.png" style="min-width: 48px; max-width:131px;">
+	<img sz-position sz-order sz-width sz-chance chance="25" src="content/montoya/url0/emoji-tulip.png" style="min-width: 48px; max-width:153px;">
+	<img sz-position sz-order sz-width sz-chance chance="25" src="content/montoya/url0/emoju-flower2.png" style="min-width: 48px; max-width:176px;">
+	<img sz-position sz-width sz-chance chance="100" src="content/montoya/url0/hands.png" style="min-width: 50%; max-width: 1200px; z-index: 1500 !important;">
+</div>

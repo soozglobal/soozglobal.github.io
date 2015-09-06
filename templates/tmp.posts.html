@@ -1,0 +1,15 @@
+<div class="txt mobsubpan bt bb bl ease" ng-class="{active: txtIsActive === 1, 'top-panel': state === 3}"  ng-mouseenter="setTourStep(6)">
+	<div ng-repeat="x in allPosts" style="height: 100%;" class="article-parent">
+		<div ng-show="number == {{$index + 1}}" style="height: 100%;">
+			<div class="article-nav">
+				<i class="fa fa-chevron-circle-left article-button ml5" ng-click="prevArticle()" ng-mouseover="setTourStep(8)"></i>
+				<i class="fa fa-chevron-circle-right article-button" ng-click="nextArticle()" ng-mouseover="setTourStep(7)"></i>
+				<i class="fa article-button screen-large" ng-click="toggleTxt()" ng-class="{'fa-unlock-alt': txtIsActive === 0, 'fa-lock': txtIsActive === 1}" ng-mouseover="setTourStep(9)"></i>
+				<p class="article-link">http://sooz.global/#/p/{{x.id}}</p>
+			</div>
+			<div ng-bind-html="x.body | trust"  class="current-post">
+			</div>
+		</div>
+
+	</div>
+</div>
