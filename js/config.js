@@ -3,7 +3,7 @@ var sooz = angular.module('sooz', ['FBAngular', 'ui.router', 'angular-loading-ba
 sooz.provider('sets', function (){
 	var sets= [
 	'feelingblue', 'feelinghome', 'feelingclose', 'feelingstairs',
-	'archibald', 'jossa', 'joyce', 'montoya', 'riley', 'sab', 'tran', 'trananne'
+	'archibald', 'jossa', 'joyce', 'kuns', 'montoya', 'riley', 'sab', 'tran', 'trananne'
 	];
 	// var sets= ['feelingblue'];
 	var random;
