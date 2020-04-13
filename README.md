@@ -45,8 +45,8 @@ Hierarchy
 For simplicity, editable files and folders are marked with a dash `-` at the beginning of file name. After opening `sooz-dist` folder you will face this hierarchy of files and folders:
 
  - `sooz-components`
- - **`-YOUR-IMAGES`**
- - **`-CANVAS.html`**
+ - **`-YOUR-IMAGES`**
+ - **`-CANVAS.html`**
  - **`-IMAGES.js`**
  - `index.html`
 
@@ -106,7 +106,7 @@ Let me clarify things a bit more. Below is the syntax of a bundle with one image
 <pre>
 	{"photos": [
 		{"original_size": {"url": "<b>-YOUR-IMAGES/One.png</b>"}},
-	]},
+	]},
 </pre>
 And if you want to bundle more images, you can simply copy/paste the line with orginal_size:
 <pre>
@@ -151,33 +151,33 @@ HTML gives you the power to bring content from the external sources. You can emb
 
 This video will have a random position on every iteration of your canvas because we added `sz-position`. As you can see, modifiers can be combined to bring dynamism anf flexibility to your work. Below is a list of available modifiers on sooz:
 
-`sz-order`: Gives random layer priority to element. Elements without this are placed at the bottom.
+`sz-order`: Gives random layer priority to element. Elements without this are placed at the bottom.
 
-`sz-position`: Gives random position on to element.
+`sz-position`: Gives random position on to element.
 
-`sz-size`: Gives random size to element. Ratio is not preserved, it is random.
+`sz-size`: Gives random size to element. Ratio is not preserved, it is random.
 
-`sz-width`: Gives random width to element, height will be adjusted to preserve ratio.
+`sz-width`: Gives random width to element, height will be adjusted to preserve ratio.
 
-`sz-height`: Gives random height to element, width will be adjusted to preserve ratio.
+`sz-height`: Gives random height to element, width will be adjusted to preserve ratio.
 
-`sz-rotate`: Gives random right angle rotation to element.
+`sz-rotate`: Gives random right angle rotation to element.
 
-`sz-border`: Gives random border to an element.
+`sz-border`: Gives random border to an element.
 
-`sz-mask-frame`: Masks element in the shape of a frame. Consistent behavior on every iteration.
+`sz-mask-frame`: Masks element in the shape of a frame. Consistent behavior on every iteration.
 
-`sz-mask-rect`: Masks element in the shape of a rectangle. Random on every iteration.
+`sz-mask-rect`: Masks element in the shape of a rectangle. Random on every iteration.
 
-`sz-mask-circ`: Masks element in the shape of a full or partial circle. Random on every iteration.
+`sz-mask-circ`: Masks element in the shape of a full or partial circle. Random on every iteration.
 
-`sz-mask-x`: Masks an element in the shape of an X. Consistent behavior on every iteration.
+`sz-mask-x`: Masks an element in the shape of an X. Consistent behavior on every iteration.
 
-`sz-mask-diamond`: Masks element in the shape of a diamond, based on element size.
+`sz-mask-diamond`: Masks element in the shape of a diamond, based on element size.
 
-`sz-spin`: Adds an infinite spinning animation to element.
+`sz-spin`: Adds an infinite spinning animation to element.
 
-`sz-frame`: Applies sz-position, sz-size, sz-border, and sz-order all together.
+`sz-frame`: Applies sz-position, sz-size, sz-border, and sz-order all together.
 
 `sz-image`: Applies sz-position, sz-width, and sz-order all together.
 
